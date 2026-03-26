@@ -89,6 +89,9 @@
         }
       ]
     },
+
+
+
     {
       "id": 2,
       "filiere": "Infographie",
@@ -171,6 +174,8 @@
         }
       ]
     },
+
+
     
     {
       "id": 3,
@@ -262,6 +267,237 @@
           ]
         }
       ]
+    },
+    {
+  "id": 4,
+  "filiere": "Digital Design - Option : UI Designer",
+  "diplome": "Technicien Spécialisé",
+  "duree": "2 ans",
+  "image": "/images/ui.png",
+  "description": "Le UI Designer est le professionnel chargé du lien entre la machine et l'homme. Il s'occupe de la conception générale de l'interface, de la clarté de la navigation, de l'optimisation des parcours et de la qualité des contenus.",
+  "conditions": {
+    "niveau": "Bacheliers Scientifiques ou Techniques",
+    "age": "Selon conditions standards TS (non spécifié ici)",
+    "specialite": "Scientifique ou Technique",
+    "selection": "Inscription en ligne et remplissage du dossier d'orientation"
+  },
+  "debouches": [
+    "UI Designer",
+    "Designer d'interface",
+    "Web Designer",
+    "Évolutions vers UX Designer ou DA Digital"
+  ],
+  "competences": [
+    "Améliorer l'interface utilisateur",
+    "Rendre la navigation intuitive et fluide",
+    "Concevoir le design selon l'identité de marque",
+    "Valoriser les éléments graphiques et textuels",
+    "Analyser les utilisateurs pour identifier les points d'amélioration",
+    "Produire des maquettes graphiques",
+    "Exploiter les tests utilisateurs"
+  ],
+  "logiciels": [
+    "Outils de conception d'interface (Figma, Adobe XD)",
+    "Logiciels de création graphique",
+    "Outils de prototypage",
+    "Outils collaboratifs"
+  ],
+  "langues": [
+    "Arabe",
+    "Français",
+    "Anglais technique"
+  ],
+  "heures": {
+    "total": 0,
+    "note": "Volume horaire non spécifié dans le document"
+  },
+  "annees": [
+    {
+      "annee": 1,
+      "nom_phase": "Tronc commun Digital Design",
+      "modules_generaux": [],
+      "modules_techniques": [
+        { "nom": "Bases du Digital Design", "duree": 0 },
+        { "nom": "Algorithmique et logique", "duree": 0 }
+      ]
+    },
+    {
+      "annee": 2,
+      "nom_phase": "Spécialisation UI Designer",
+      "modules_generaux": [],
+      "modules_techniques": [
+        { "nom": "Design d'interface avancé", "duree": 0 },
+        { "nom": "Projet UI", "duree": 0 },
+        { "nom": "Stage en entreprise", "duree": 160 }
+      ]
     }
+
+
+  ]
+},
+{
+  "id": 5,
+  "filiere": "Opérateur Publication Assistée par Ordinateur (PAO)",
+  "diplome": "Formation Qualifiante",
+  "duree": "660 heures",
+  "image": "/images/pao.png",
+  "description": "L’opérateur PAO est un professionnel de la publication assistée par ordinateur. À l'aide de logiciels informatiques d’écriture et de graphisme, il produit des documents écrits et des images destinées à l’impression.",
+  "conditions": {
+    "niveau": "2ème année du baccalauréat",
+    "age": "Non spécifié",
+    "specialite": "Toutes branches",
+    "selection": "Présélection sur dossier, Entretien après présélection"
+  },
+  "debouches": [
+    "Agences de publicité",
+    "Agences de communication graphiques",
+    "Studios et laboratoires graphiques",
+    "Imprimeries de presse ou de labeur",
+    "Services de communication interne"
+  ],
+  "competences": [
+    "Traiter des textes (saisie, balisage, typographie)",
+    "Traiter des illustrations via l'outil informatique",
+    "Calibrer la chaîne graphique",
+    "Numériser et appliquer des retouches colorimétriques",
+    "Réaliser des mises en page professionnelles"
+  ],
+  "logiciels": [
+    "Logiciels de dessin vectoriel",
+    "Logiciels de traitement d'image",
+    "Logiciels de mise en page (PAO)",
+    "Outils de maquette numérique"
+  ],
+  "langues": [
+    "Arabe",
+    "Français",
+    "Anglais technique"
+  ],
+  "heures": {
+    "total": 660.0
+  },
+  "annees": [
+    {
+      "annee": 1,
+      "modules_generaux": [
+        { "nom": "Esprit d'initiative et d'entreprise", "duree": 60.0 }
+      ],
+      "modules_techniques": [
+        { "nom": "Métier et formation", "duree": 15.0 },
+        { "nom": "La chaîne graphique", "duree": 45.0 },
+        { "nom": "Les règles de conception graphique", "duree": 45.0 },
+        { "nom": "La gestion des couleurs", "duree": 60.0 },
+        { "nom": "Logiciels de dessin", "duree": 75.0 },
+        { "nom": "Logiciel de traitement d’image", "duree": 75.0 },
+        { "nom": "Logiciel de mise en page", "duree": 75.0 },
+        { "nom": "Réalisation de la maquette numérique", "duree": 90.0 },
+        { "nom": "Intégration en milieu du travail", "duree": 120.0 }
+      ]
+    }
+  ]
+},
+{
+  "id": 6,
+  "filiere": "Traitement des illustrations sur illustrator",
+  "diplome": "Formation Qualifiante",
+  "duree": "30 heures",
+  "image": "/images/illustrator.png",
+  "description": "Le traitement des illustrations à l'aide du logiciel Illustrator permet de créer des images vectorielles originales pour une gamme de produits imprimés et numériques.",
+  "conditions": {
+    "niveau": "2 ème année du baccalauréat",
+    "age": "Non spécifié",
+    "specialite": "Toutes branches",
+    "selection": "Remplissage du dossier d'orientation, Présélection sur dossier, Entretien après présélection"
+  },
+  "debouches": [
+    "Agences de publicité",
+    "Agences de communication graphiques",
+    "Studios et laboratoires graphiques",
+    "Imprimerie de presse, labeur ou packaging",
+    "Entreprises spécialisée dans la communication imprimée",
+    "Imprimerie interne d'une entreprise"
+  ],
+  "competences": [
+    "Différencier les logiciels matriciels et vectoriels",
+    "Décrire l'interface et les outils d'Illustrator",
+    "Produire des documents vectoriels simples et complexes",
+    "Réaliser un packaging",
+    "Réaliser des illustrations originales"
+  ],
+  "logiciels": [
+    "Adobe Illustrator"
+  ],
+  "langues": [
+    "Arabe",
+    "Français",
+    "Anglais technique"
+  ],
+  "heures": {
+    "total": 30.0
+  },
+  "annees": [
+    {
+      "annee": 1,
+      "nom_phase": "Formation Qualifiante",
+      "modules_generaux": [],
+      "modules_techniques": [
+        { "nom": "Réaliser des illustrations sur illustrator", "duree": 30.0 }
+      ]
+    }
+  ]
+},
+{
+  "id": 7,
+  "filiere": "Traitement d'image sur photoshop",
+  "diplome": "Formation Qualifiante",
+  "duree": "45 heures",
+  "image": "/images/photoshop.png",
+  "description": "Cette formation permet d'acquérir les connaissances nécessaires au traitement d'une image sous Adobe Photoshop, incluant les techniques de numérisation, de retouche colorimétrique, de détourage et de photomontage.",
+  "conditions": {
+    "niveau": "2ème année du baccalauréat ",
+    "age": "Non spécifié",
+    "specialite": "Toutes branches",
+    "selection": "Remplissage du dossier d'orientation, présélection sur dossier et entretien après présélection "
+  },
+  "debouches": [
+    "Agences de publicité ",
+    "Agences de communication graphiques ",
+    "Imprimeries ",
+    "Entreprises spécialisées dans la communication imprimée",
+    "Imprimeries internes d'entreprises "
+  ],
+  "competences": [
+    "Distinguer les caractéristiques des documents à analyser",
+    "Améliorer la qualité d'une image ou d'un dessin ",
+    "Optimiser la résolution des images ",
+    "Réaliser des détourages simples et complexes ",
+    "Réaliser des traitements d'image complets sur Photoshop "
+  ],
+  "logiciels": [
+    "Adobe Photoshop "
+  ],
+  "langues": [
+    "Arabe",
+    "Français",
+    "Anglais technique"
+  ],
+  "heures": {
+    "total": 45.0
+  },
+  "annees": [
+    {
+      "annee": 1,
+      "nom_phase": "Formation Qualifiante",
+      "modules_generaux": [],
+      "modules_techniques": [
+        {
+          "nom": "Réaliser des traitements d'images sur Photoshop",
+          "duree": 45.0
+        }
+      ]
+    }
+  ]
+}
+
   ]
 }

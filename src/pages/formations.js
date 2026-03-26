@@ -14,7 +14,8 @@ function Formations() {
 
   return (
     <div className="formations-container" id="formations">
-     <div className="text-center mb-5">
+      <div className="text-center mb-5">
+
         <h1 className="title display-4 fw-bold mb-3">Nos Formations</h1>
       </div>
 

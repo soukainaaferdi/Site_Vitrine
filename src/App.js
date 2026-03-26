@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'sonner';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -13,6 +14,7 @@ import Actualités from './pages/Actualites';
 function App() {
   return (
     <div className="App">
+      <Toaster position="top-right" richColors />
       <Navbar /> 
       
       <Routes>
