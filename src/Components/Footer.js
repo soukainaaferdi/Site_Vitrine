@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link'
 
 const Footer = () => {
   return (
@@ -21,18 +22,21 @@ const Footer = () => {
           <div className="col-md-4 mb-3">
             <h5>Liens</h5>
             <ul className="list-unstyled">
-             <li>
-              <Link to="/" className="nav-link text-white">Accueil</Link>
-            </li>
-            <li>
-              <Link to="/formation" className="nav-link text-white">Formations</Link>
-            </li>
-            <li>
-              <Link to="/actualites" className="nav-link text-white">Actualités</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="nav-link text-white">Contact</Link>
-            </li>
+             <li >
+               <HashLink smooth to="/#home" className="menu-link">Accueil</HashLink>
+             </li>
+             <li >
+               <HashLink smooth to="/#about" className="menu-link">About</HashLink>
+             </li>
+             <li >
+               <HashLink smooth to="/#contact" className="menu-link">Contact</HashLink>
+             </li>
+             <li >
+               <HashLink smooth to="/#formations" className="menu-link">Formations</HashLink>
+             </li>
+             <li >
+               <HashLink to="/actualites" className="menu-link">Actualités</HashLink>
+             </li>
             </ul>
           </div>
 
