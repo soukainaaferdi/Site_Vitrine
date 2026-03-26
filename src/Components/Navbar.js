@@ -19,7 +19,7 @@ const Navbar = () => {
             <h4 style={{color:"white"}}>AG</h4>
           </Link>
 
-          {/* BUTTON MOBILE */}
+         
           <button 
             className="navbar-toggler text-white border-0 fs-2"
             onClick={openMenu}
@@ -27,10 +27,10 @@ const Navbar = () => {
             ☰
           </button>
 
-          {/* MENU NORMAL */}
+          
           <div className="collapse navbar-collapse d-none d-lg-block">
           <ul className="navbar-nav ms-auto">
-  {/* Scroll داخلي */}
+  
   <li className="nav-item">
     <a href="#home" className="nav-link text-white">Accueil</a>
   </li>
@@ -41,7 +41,7 @@ const Navbar = () => {
     <a href="#contact" className="nav-link text-white">Contact</a>
   </li>
 
-  {/* صفحات مستقلة */}
+ 
   <li className="nav-item">
     <a href="#formations" className="nav-link text-white">Formations</a>
   </li>

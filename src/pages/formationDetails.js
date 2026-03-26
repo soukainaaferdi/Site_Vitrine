@@ -40,7 +40,7 @@ function FormationDetails() {
       </div>
 
       <div className="content-grid">
-        {/* Conditions */}
+        
         <div className="info-card">
           <h2 className="section-title">Conditions d'admission</h2>
           <ul className="info-list">
@@ -52,7 +52,7 @@ function FormationDetails() {
           </ul>
         </div>
 
-        {/* Débouchés */}
+       
         <div className="info-card">
           <h2 className="section-title"> Débouchés</h2>
           <ul className="info-list">
@@ -60,7 +60,7 @@ function FormationDetails() {
           </ul>
         </div>
 
-        {/* Compétences */}
+       
         <div className="info-card">
           <h2 className="section-title"> Compétences acquises</h2>
           <ul className="info-list">
@@ -99,7 +99,7 @@ function FormationDetails() {
           </div>
         </div>
       </div>
-        {/* Year Buttons */}
+      
 <div className="year-buttons-container">
   {formation.annees.map(a => (
     <button 
