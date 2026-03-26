@@ -174,6 +174,10 @@ const Contact = () => {
       .text-green-600 {
         color: #16a34a;
       }
+      .form-control::placeholder {
+        font-size: 17px !important; 
+        font-weight: 400;
+}
     `;
     document.head.appendChild(style);
     
@@ -230,7 +234,7 @@ const Contact = () => {
                         href="mailto:support@volontaction.fr"
                         className="text-blue-600 fw-medium text-decoration-none"
                       >
-                        centre@gmail.com
+                        contact@ofppt.ma
                       </a>
                     </div>
                   </div>
@@ -276,6 +280,40 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+              
+              {/* Localisation Card */}
+              <div className="col-12 mt-4">
+                <div className="contact-card p-0 overflow-hidden d-flex flex-column" style={{ minHeight: '300px' }}>
+                  <div className="p-3 bg-white border-bottom d-flex justify-content-between align-items-center">
+                    <div className="d-flex align-items-center gap-2">
+                      <MapPin size={18} className="text-purple-600" />
+                      <h3 className="h6 fw-bold mb-0">Notre Emplacement</h3>
+                    </div>
+                    <a 
+                      href="https://www.google.com/maps?q=OFPPT+ISAG+Casablanca" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="small fw-medium"
+                      style={{ color: "#F7AD19", textDecoration: "none" }}
+                    >
+                      Voir sur Google Maps
+                    </a>
+                  </div>
+                  
+                  <div className="flex-grow-1">
+                    <iframe
+                      title="Google Map"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7144275034346!2d-7.632906424303761!3d33.58676257333642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2931a28a363%3A0x67584f93457a44f!2sCasablanca!5e0!3m2!1sfr!2sma!4v1710000000000"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0, display: 'block' }}
+                      allowFullScreen=""
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
 
             </div>
           </div>
