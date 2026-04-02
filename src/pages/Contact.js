@@ -214,16 +214,14 @@ const Contact = () => {
       <div className="container">
         {/* Header */}
 
-
         <div className="titre text-center mb-5">
-              <div className="text-center mb-5">
-                <h1 className="title display-4 fw-bold mb-3">Contactez-nous</h1>
-          <p className="lead text-muted">
-            Une question, un problème ou besoin d'aide ? Notre équipe est là pour vous répondre rapidement.
-          </p>
-              </div>
+          <div className="text-center mb-5">
+            <h1 className="title display-4 fw-bold mb-3">Contactez-nous</h1>
+            <p className="lead text-muted">
+              Une question, un problème ou besoin d'aide ? Notre équipe est là pour vous répondre rapidement.
+            </p>
+          </div>
         </div>
-
         <div className="row g-4">
           {/* Contact Info Cards */}
           <div className="col-lg-4">
@@ -238,10 +236,7 @@ const Contact = () => {
                     <div>
                       <h3 className="h5 fw-bold mb-2">Email</h3>
                       <p className="text-muted small mb-3">Envoyez-nous un email</p>
-                      <a 
-                        href="mailto:support@volontaction.fr"
-                        className="text-blue-600 fw-medium text-decoration-none"
-                      >
+                      <a href="mailto:support@volontaction.fr" className="text-blue-600 fw-medium text-decoration-none" >
                         contact@ofppt.ma
                       </a>
                     </div>
