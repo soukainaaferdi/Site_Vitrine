@@ -50,25 +50,19 @@ function FormationDetails() {
               </li>
             ))}
           </ul>
-        </div>
-
-       
+        </div>      
         <div className="info-card">
           <h2 className="section-title"> Débouchés</h2>
           <ul className="info-list">
             {formation.debouches.map((d, i) => <li key={i}>{d}</li>)}
           </ul>
-        </div>
-
-       
+        </div>     
         <div className="info-card">
           <h2 className="section-title"> Compétences acquises</h2>
           <ul className="info-list">
             {formation.competences.map((c, i) => <li key={i}>{c}</li>)}
           </ul>
         </div>
-
-        {/* Logiciels */}
         <div className="info-card">
           <h2 className="section-title"> Logiciels utilisés</h2>
           <ul className="info-list">

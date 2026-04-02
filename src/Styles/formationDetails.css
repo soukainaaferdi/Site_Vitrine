@@ -15,7 +15,7 @@
   min-height: 100vh;
 }
 
-/* Header Section */
+
 .header-section {
   background: white;
   border-radius: 12px;
@@ -38,11 +38,12 @@
   line-height: 1.6;
 }
 
-/* Content Grid */
+
 .content-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 25px;
+ 
 }
 
 .info-card {
@@ -62,7 +63,7 @@
   grid-column: 1 / -1;
 }
 
-/* Section Titles */
+
 .section-title {
   color: #053F5C;
   font-size: 1.3rem;
@@ -72,7 +73,7 @@
   display: inline-block;
 }
 
-/* Lists */
+
 .info-list {
   list-style: none;
   padding: 0;
@@ -95,7 +96,7 @@
   margin-right: 8px;
 }
 
-/* Modules Grid */
+
 .modules-grid {
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +119,7 @@
   cursor: default;
 }
 
-/* Duration Stats */
+
 .duration-stats {
   display: flex;
   flex-direction: column;
@@ -151,7 +152,7 @@
   font-size: 0.9rem;
 }
 
-/* Loading & Not Found */
+
 .loading-container,
 .not-found-container {
   display: flex;
@@ -171,7 +172,7 @@
   border-left: 4px solid #F7AD19;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .details-container {
     padding: 20px 15px;
@@ -207,7 +208,7 @@
     padding: 4px 10px;
   }
 }
-/* Tables Styles */
+
 .table-responsive {
   overflow-x: auto;
   margin-bottom: 25px;
@@ -262,7 +263,7 @@
   border-bottom: none;
 }
 
-/* Year Buttons Styles */
+
 .year-buttons-container {
   margin: 20px 0 25px;
   display: flex;
@@ -298,7 +299,7 @@
   box-shadow: 0 2px 8px rgba(247, 173, 25, 0.2);
 }
 
-/* Table Section Headers */
+
 .table-section-title {
   color: #053F5C;
   font-size: 1.2rem;
@@ -315,7 +316,7 @@
   font-weight: 600;
 }
 
-/* Alternative table style for simple tables */
+
 .simple-table {
   width: 100%;
   border-collapse: collapse;
@@ -347,7 +348,7 @@
   background-color: #faf9f5;
 }
 
-/* Responsive Table Styles */
+
 @media (max-width: 768px) {
   .table-responsive {
     padding: 15px;

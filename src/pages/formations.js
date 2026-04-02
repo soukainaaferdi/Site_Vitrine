@@ -24,7 +24,7 @@ function Formations() {
         <h1 className="title display-4 fw-bold mb-3">Nos Formations</h1>
       </div>
 
-      <div className="cards-grid">
+      <div className="cards-grid ">
         {formations.slice(0, visibleCount).map(f => (
           <div className="card" key={f.id}>
             <img 
