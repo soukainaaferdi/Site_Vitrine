@@ -12,7 +12,7 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    // Add custom styles
+  
     const style = document.createElement('style');
     style.textContent = `
       .contact-section {
