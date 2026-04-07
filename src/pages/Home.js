@@ -1,22 +1,13 @@
 // import React from 'react';
 // import '../Styles/Home.css';
-
 // import { Link } from 'react-router-dom';
+
 // const Hero = () => {
-
-
-
-
-  
-  // const sectionStyle = {
-  //   backgroundImage: "url('/images/home.jpg')",
+ 
+//   const sectionStyle = {
+//     backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(3, 3, 3, 0.4) 100%), url('/images/home.jpg')`,
 //     backgroundSize: 'cover',
-//     backgroundPosition: 'center',
-//     backgroundRepeat: 'no-repeat',
-//     height: '100vh',
-//     width: '100%',
-//     display: 'flex',
-//     alignItems: 'center'
+//     backgroundPosition: 'center'
 //   };
 
 //   return (
@@ -70,7 +61,10 @@ const Hero = () => {
       position: 'relative'
     };
   return (
-    <section className="hero-section d-flex align-items-center" style={sectionStyle}>
+    <section 
+      className="hero-section d-flex align-items-center" 
+      style={sectionStyle}
+    >
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-7 col-md-8 text-white animate-fade-in">
@@ -82,12 +76,12 @@ const Hero = () => {
                 Institut Spécialisé des Arts Graphiques. Développez vos compétences en design graphique, infographie et techniques d’impression de pointe.
               </p>
               <div className="d-flex gap-3">
-                 <a href="#formations"className="btn-lg px-5 rounded-pill hero-btn main-btn text-decoration-none " >
-                Découvrir nos filières
-               </a>
-               <a href="#contact" className="btn btn-lg px-5 rounded-pill hero-btn secondary-btn text-decoration-none d-inline-block text-white">
-                Contactez-nous
-               </a>
+                <a href="#formations" className="btn-lg px-5 rounded-pill hero-btn main-btn text-decoration-none">
+                  Découvrir nos filières
+                </a>
+                <a href="#contact" className="btn btn-lg px-5 rounded-pill hero-btn secondary-btn text-decoration-none d-inline-block text-white">
+                  Contactez-nous
+                </a>
               </div>
             </div>
           </div>
