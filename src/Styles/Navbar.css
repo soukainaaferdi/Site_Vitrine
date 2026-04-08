@@ -1,47 +1,114 @@
 
 
 
+.navbar-brand div {
+  display: flex !important;
+  flex-direction: row !important; 
+  flex-wrap: nowrap !important;    
+  align-items: center !important;
+  height: 100%;
+}
+
+.brand-text {
+  font-family: "Times New Roman", Times, serif !important;
+  
+  font-weight: 500 !important;
+  
+  font-size: 2.2rem !important;
+  
+  letter-spacing: -1px !important;
+  
+  color: #ffffff !important;
+
+  display: inline-block !important;
+  white-space: nowrap !important; 
+  margin-left: 10px !important;
+  margin-top: 20px !important;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .brand-text {
+    font-size: 1.6rem !important;
+    letter-spacing: -0.5px !important;
+  }
+}
+ 
+
+
+
+
+
+
 
 
 
 
 .navbar {
-  height: 80px;           /* حجم ثابت للـ navbar */
-  overflow: hidden;       /* يمنع الصورة تكبرها */
+  height: 80px !important;   
+  display: flex;
+  align-items: center;      
+  padding: 0 1rem;
+  background-color: #053F5C !important;
+  z-index: 1000;
+  overflow: hidden;         
 }
 
-.logo {
-  height: 150px;          /* الصورة كبيرة كيف بغيتي */
-  width: auto;
+.logo-img {
+  height: 60px;            
+  width: auto;              
+  object-fit: contain;      
+  transition: 0.3s;
+  flex-shrink: 0;
+
 }
-.side-menu{
+
+@media (min-width: 992px) {
+  .logo-img {
+    height: 70px;         
+}
+}
+
+
+.side-menu {
   position: fixed;
-  top:0;
-  right:-260px;
-  width:260px;
-  height:100vh;
-  background:#053F5C;
-  transition:0.3s;
-  z-index:2000;
+  top: 0;
+  right: -100%; 
+  width: 280px;
+  height: 100vh;
+  background-color: #053F5C;
+  z-index: 1050;
+  transition: 0.4s ease-in-out;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.3);
 }
 
-.side-menu.active{
-  right:0;
+.side-menu.active {
+  right: 0;
 }
 
-.menu-link{
-  color:white;
-  text-decoration:none;
-  font-size:18px;
+.navbar-nav .nav-link:hover {
+  color: orange !important;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover{
-  color:#F7AD19 !important;
-  transition:0.3s;
+.menu-link:hover {
+  color: orange !important;
+  transition: color 0.3s ease;
+  padding-left: 5px; 
 }
 
-.menu-link:hover{
-  color:#F7AD19;
-  transition:0.3s;
+
+.menu-link {
+  text-decoration: none;
+  
 }
 
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
