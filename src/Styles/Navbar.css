@@ -1,17 +1,10 @@
-
-
-
-
-
-
-
 .navbar {
-  height: 80px;           /* حجم ثابت للـ navbar */
-  overflow: hidden;       /* يمنع الصورة تكبرها */
+  height: 80px;           
+  overflow: hidden;       
 }
 
 .logo {
-  height: 150px;          /* الصورة كبيرة كيف بغيتي */
+  height: 150px;        
   width: auto;
 }
 .side-menu{
