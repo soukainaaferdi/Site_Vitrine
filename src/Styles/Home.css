@@ -1,20 +1,9 @@
-.home-section {
-    
+/* Styles dyal PC */
+.hero-section {
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
     min-height: 100vh;          
-}
-
-.badge-top {
-  background: #da950b;
-  color: #053F5C;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
 }
 
 .text-highlight {
@@ -24,15 +13,15 @@
 .description {
   color: #e0e0e0 !important; 
   max-width: 600px;
-  line-height:2.9em;
+  line-height: 2.5em;
 }
-
 
 .hero-btn {
   padding: 12px 30px;
   font-weight: 600;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s ease;
   border: none;
+  text-align: center;
 }
 
 .main-btn {
@@ -46,79 +35,49 @@
   color: #ffffff;
 }
 
-.hero-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  filter: brightness(1.1);
-}
-
-
-.floating-img {
-  max-width: 80%;
-  border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  animation: floatAnim 4s ease-in-out infinite;
-}
-.contact{
-  color: white;
-}
-@keyframes floatAnim {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-}
-
-
 .animate-fade-in {
   animation: slideRight 1s ease-out forwards;
 }
 
 @keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
- 
 
-
+/* --- RESPONSIVE MOBILE (Hada huwa l-muhim) --- */
 @media (max-width: 768px) {
   .hero-section {
-    background-position: center center !important; 
-    text-align: center;
-    /* Hna knti derti 100px 15px bla ma t-swbiha mzyan */
-    padding: 100px 15px !important; 
-    min-height: 70vh !important;
+    /* Hadi kat-force-i tswira d-tsghar o d-t-adapta */
+    background-size: 100% auto !important; 
+    background-position: top center !important;
+    min-height: 50vh !important; 
+    padding: 120px 15px 40px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .display-3 {
-    /* Hada darori y-tsgher bach tswira t-ban */
-    font-size: 1.8rem !important; 
-    margin-top: 20px;
-    line-height: 1.2;
+    font-size: 1.7rem !important; 
+    margin-top: 10px !important;
+    line-height: 1.2 !important;
   }
 
   .description {
-    margin: 0 auto 30px auto;
-    line-height: 1.4em !important; 
     font-size: 0.9rem !important;
+    line-height: 1.4em !important;
+    margin: 0 auto 25px auto !important;
   }
 
   .d-flex.gap-3 {
-    justify-content: center;
     flex-direction: column !important;
-    align-items: center;
+    align-items: center !important;
     gap: 15px !important;
   }
 
   .hero-btn {
-    width: 100% !important; 
-    /* Hna knti derti margin-bottom: 100% hadi ghada t-hrreb lik kolchi */
-    margin-bottom: 10px; 
+    width: 90% !important;
     font-size: 0.9rem !important;
-    padding: 12px !important;
+    padding: 10px 20px !important;
   }
 }

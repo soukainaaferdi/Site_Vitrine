@@ -1,37 +1,33 @@
-
-
 import React from 'react';
 import '../Styles/Home.css';
 import { Link } from 'react-router-dom';
-const Hero = () => {
 
-const sectionStyle = {
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/home.jpg')`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center center',
-  backgroundRepeat: 'no-repeat',
-  backgroundAttachment: 'scroll', // Darori f l-mobile
-  minHeight: '100vh',
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center'
-};
+const Hero = () => {
+  const sectionStyle = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/home.jpg')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'scroll', 
+    minHeight: '100vh',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center'
+  };
+
   return (
-    <section 
-      className="hero-section d-flex align-items-center" 
-      style={sectionStyle}
-    >
+    <section className="hero-section" style={sectionStyle}>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-7 col-md-8 text-white animate-fade-in">
-            <div className="hero-content-wrapper">             
+            <div className="hero-content-wrapper">              
               <h1 className="display-3 fw-bold mb-4 mt-2">
                 Bienvenue à <span className="text-highlight">l’ISAG</span> Casablanca
               </h1>
               <p className="lead mb-5 description">
                 Institut Spécialisé des Arts Graphiques. Développez vos compétences en design graphique, infographie et techniques d’impression de pointe.
               </p>
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 btn-container">
                 <a href="#formations" className="btn-lg px-5 rounded-pill hero-btn main-btn text-decoration-none">
                   Découvrir nos filières
                 </a>
