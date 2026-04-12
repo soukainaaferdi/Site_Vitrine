@@ -13,58 +13,76 @@ const Home = () => {
   const styles = {
     heroSection: {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/home.jpg')`,
-      backgroundSize: isMobile ? 'contain' : 'cover',
-      backgroundPosition: isMobile ? 'top center' : 'center',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundColor: '#053F5C',
-      minHeight: isMobile ? '55vh' : '100vh',
+      // '48vh' hwa l-irtifa' li khlliti f tswira l-khra
+      minHeight: isMobile ? '48vh' : '100vh',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
-      paddingTop: isMobile ? '150px' : '0',
+    },
+    contentContainer: {
+      // Had l-Padding hwa li ghadi i-habbat l-3onwan chwiya l-teht f mobile
+      paddingTop: isMobile ? '80px' : '0', 
     },
     title: {
       fontSize: isMobile ? '1.5rem' : '3.5rem',
       fontWeight: 'bold',
-      marginBottom: '1.5rem',
-      color: '#ffffff'
+      marginBottom: isMobile ? '1rem' : '1.5rem',
+      color: '#ffffff',
+      textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+    },
+    paragraph: {
+      maxWidth: '800px', 
+      fontSize: isMobile ? '0.85rem' : '1.2rem', 
+      lineHeight: '1.4',
+      marginBottom: isMobile ? '1.5rem' : '3rem'
     },
     mainBtn: {
       backgroundColor: '#eea108',
       color: '#071f2f',
-      padding: '12px 35px',
+      padding: isMobile ? '8px 20px' : '12px 35px',
       borderRadius: '50px',
       fontWeight: '600',
       textDecoration: 'none',
       width: isMobile ? '80%' : 'auto',
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: isMobile ? '0.8rem' : '1rem'
     },
     secondaryBtn: {
       backgroundColor: 'transparent',
       border: '2px solid #ffffff',
       color: '#ffffff',
-      padding: '12px 35px',
+      padding: isMobile ? '8px 20px' : '12px 35px',
       borderRadius: '50px',
       fontWeight: '600',
       textDecoration: 'none',
       width: isMobile ? '80%' : 'auto',
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: isMobile ? '0.8rem' : '1rem'
     }
   };
 
   return (
     <section style={styles.heroSection}>
-      <div className="container text-center text-white">
+      {/* Zdna had l-style hna bach i-hbat l-3onwan */}
+      <div className="container text-center text-white px-4" style={styles.contentContainer}>
         <h1 style={styles.title}>
           Bienvenue à <span style={{ color: '#eea108' }}>l'ISAG</span> Casablanca
         </h1>
-        <p className="lead mb-5 mx-auto" style={{ maxWidth: '800px', fontSize: isMobile ? '0.9rem' : '1.2rem' }}>
+        <p className="mx-auto" style={styles.paragraph}>
           Institut Spécialisé des Arts Graphiques. Développez vos compétences en design graphique, infographie et techniques d’impression de pointe.
         </p>
-        <div className="d-flex gap-3 justify-content-center flex-column flex-sm-row align-items-center">
-          <Link to="/formations" style={styles.mainBtn}>Découvrir nos filières</Link>
-          <Link to="/contact" style={styles.secondaryBtn}>Contactez-nous</Link>
+        <div className="d-flex gap-2 justify-content-center flex-column flex-sm-row align-items-center">
+          <Link to="/formations" style={styles.mainBtn}>
+            Découvrir nos filières
+          </Link>
+          <Link to="/contact" style={styles.secondaryBtn}>
+            Contactez-nous
+          </Link>
         </div>
       </div>
     </section>
