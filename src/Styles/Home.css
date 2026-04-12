@@ -1,93 +1,21 @@
-/* --- Desktop Styles --- */
+/* f l-fauq dyal Desktop Styles */
 .hero-section {
-    position: relative;
-    overflow: hidden;
+    background-size: cover; /* kheliha cover f PC */
+    background-position: center;
+    min-height: 100vh;
 }
 
-.text-highlight {
-  color: #eea108;
-}
-
-.description {
-  color: #e0e0e0 !important; 
-  max-width: 700px;
-  line-height: 1.8;
-  font-size: 1.2rem;
-}
-
-.hero-btn {
-  padding: 14px 35px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  display: inline-block;
-}
-
-.main-btn {
-  background-color: #eea108;
-  color: #071f2f;
-}
-
-.secondary-btn {
-  background-color: transparent;
-  border: 2px solid #ffffff !important;
-  color: #ffffff;
-}
-
-.hero-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.animate-fade-in {
-  animation: fadeIn 1.2s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- MOBILE RESPONSIVE (Hada li kigadd tswira) --- */
+/* Had l-media query hiya li ghadi t-gadd tswira bach tban kamla */
 @media (max-width: 768px) {
   .hero-section {
-    /* force tswira t-ban kamla bla ma t-t-zoom-a */
-    background-size: contain !important; 
-    background-position: top center !important;
-    background-color: #053F5C !important; /* had l-lon dima y-kon teht tswira */
+    background-size: contain !important; /* Hadi hiya li kat-jme3 tswira kamla */
+    background-position: top center !important; /* Kat-hbet tswira bach l-office t-ban */
+    background-color: #053F5C !important; /* L-lon dyal l-office bach mat-ban-ch l-khwa */
     
-    /* n9ssi men l-tool bach l-ktaba dyal l-office t-ban m9adda */
-    min-height: 60vh !important; 
-    padding-top: 140px !important; 
+    min-height: 65vh !important; 
+    padding-top: 180px !important; /* Kat-hbet l-ktaba bach mat-ghatich l-logo d l-office */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  }
-
-  .display-3 {
-    font-size: 1.5rem !important;
-    margin-top: 20px !important;
-    line-height: 1.2 !important;
-  }
-
-  .description {
-    font-size: 0.85rem !important;
-    line-height: 1.4em !important;
-    margin-bottom: 20px !important;
-    max-width: 90% !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .d-flex.gap-3 {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-  }
-
-  .hero-btn {
-    width: 85% !important;
-    padding: 10px !important;
-    font-size: 0.9rem !important;
   }
 }
