@@ -5,32 +5,56 @@
     min-height: 100vh;
 }
 
-/* Had l-media query hiya li ghadi t-gadd tswira bach tban kamla */
 @media (max-width: 768px) {
   .hero-section {
-    /* هادا هو السر باش تبان التصويرة كاملة بلا ما تـزومـا */
-    background-size: 100% auto !important; 
+    /* Tswira t-jm3 o t-ban kamla bl-office */
+    background-size: contain !important; 
     background-position: top center !important;
-    background-repeat: no-repeat !important;
-    
-    /* كنبدلو اللون ديال الخلفية باش يجي متناسق مع التصويرة لي تجمعات */
-    background-color: #053F5C !important; 
-
-    /* كنهبطو الكتيبة شوية باش متغطيش على اللوغو لي في التصويرة */
-    padding-top: 160px !important; 
-    min-height: 70vh !important;
+    background-color: #053F5C !important;
+    min-height: 55vh !important; 
+    padding-top: 150px !important; /* Had l-hbet hiya li kat-khli l-office i-ban */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
   }
 
   .display-3 {
-    font-size: 1.4rem !important; /* كنصغرو العنوان باش يبقى ليسباس للتصويرة */
-    line-height: 1.2 !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 10px !important;
   }
 
   .description {
+    font-size: 0.8rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Les buttons sghar o rj3o l-style d-tswira li sifti */
+  .hero-btn {
+    padding: 10px 20px !important; /* sgharna l-hjm */
     font-size: 0.85rem !important;
-    max-width: 90% !important;
+    border-radius: 50px !important;
+    width: 80% !important; /* i-jiw mnasbin m3a l-ecran d portable */
+    max-width: 220px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  /* Button Orange (Main) */
+  .main-btn {
+    background-color: #eea108 !important;
+    color: #071f2f !important;
+  }
+
+  /* Button Transparent (Secondary) */
+  .secondary-btn {
+    background-color: transparent !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+  }
+
+  .d-flex.gap-3 {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
   }
 }
