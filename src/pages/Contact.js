@@ -11,7 +11,7 @@ const Contact = () => {
     subject: "",
     message: ""
   });
-  const [setIsSending] = useState(false);
+  const [isSending,setIsSending] = useState(false);
 
   useEffect(() => {
   
