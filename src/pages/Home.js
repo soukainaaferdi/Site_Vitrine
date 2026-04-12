@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Styles/Home.css';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const sectionStyle = {
@@ -18,20 +17,20 @@ const Hero = () => {
   return (
     <section className="hero-section" style={sectionStyle}>
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-7 col-md-8 text-white animate-fade-in">
+        <div className="row justify-content-center">
+          <div className="col-lg-8 col-md-10 text-white animate-fade-in text-center-mobile">
             <div className="hero-content-wrapper">              
-              <h1 className="display-3 fw-bold mb-4 mt-2">
+              <h1 className="display-3 fw-bold mb-4">
                 Bienvenue à <span className="text-highlight">l’ISAG</span> Casablanca
               </h1>
-              <p className="lead mb-5 description">
+              <p className="lead mb-5 description mx-auto">
                 Institut Spécialisé des Arts Graphiques. Développez vos compétences en design graphique, infographie et techniques d’impression de pointe.
               </p>
-              <div className="d-flex gap-3 btn-container">
+              <div className="d-flex gap-3 justify-content-center-mobile flex-column-mobile">
                 <a href="#formations" className="btn-lg px-5 rounded-pill hero-btn main-btn text-decoration-none">
                   Découvrir nos filières
                 </a>
-                <a href="#contact" className="btn btn-lg px-5 rounded-pill hero-btn secondary-btn text-decoration-none d-inline-block text-white">
+                <a href="#contact" className="btn btn-lg px-5 rounded-pill hero-btn secondary-btn text-decoration-none text-white">
                   Contactez-nous
                 </a>
               </div>
