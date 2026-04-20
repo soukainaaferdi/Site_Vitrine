@@ -40,34 +40,17 @@
 
   display: inline-block;
 
-  width: auto;
-
- 
-
-}
-
-
+  width: auto;}
 
 .cards-grid {
-
   display: grid;
-
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
   gap: 25px;
-
   justify-content: center;
-
- 
-
- 
-
 }
-
 
 
 .card {
-
   background: white;
 
   border: 1px solid #e0e0e0;
@@ -84,9 +67,14 @@
 
     border-radius: 8px;
 
+
     overflow: hidden;
 
  
+
+
+    overflow: hidden; 
+  
 
 }
 
@@ -176,7 +164,7 @@
 
 
 
-/* Responsive */
+
 
 @media (max-width: 768px) {
 
@@ -247,8 +235,3 @@
     color: #429EBD;
 
   }
-
-
-
-
-
