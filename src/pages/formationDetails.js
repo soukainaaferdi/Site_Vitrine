@@ -8,17 +8,18 @@ function FormationDetails() {
   const [formation, setFormation] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedYear, setSelectedYear] = useState(1);
-  useEffect(() => {
-    axios.get(`http://localhost:5000/formations/${id}`)
-      .then(res => {
-        setFormation(res.data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, [id]);
+useEffect(() => {
+       axios.get("/formations.json")
+  .then(res => {
+    const found = res.data.formations.find(f => f.id == id);
+      setFormation(found);
+      setLoading(false);
+    })
+    .catch(err => {
+      console.error(err);
+      setLoading(false);
+    });
+}, [id]);
 
   if (loading) return (
     <div className="loading-container">
@@ -80,15 +81,15 @@ function FormationDetails() {
           <div className="duration-stats">
             <div className="duration-item">
               <span className="duration-label">Total:</span>
-              <span className="duration-value">{formation.heures.total} heures</span>
+              <span className="duration-value">{formation.heures?.total ||0} heures</span>
             </div>
             <div className="duration-item">
               <span className="duration-label">Technique:</span>
-              <span className="duration-value">{formation.heures.technique} heures</span>
+              <span className="duration-value">{formation.heures?.technique ||0} heures</span>
             </div>
             <div className="duration-item">
               <span className="duration-label">Transversal:</span>
-              <span className="duration-value">{formation.heures.transversal} heures</span>
+              <span className="duration-value">{formation.heures?.transversal||0} heures</span>
             </div>
           </div>
         </div>

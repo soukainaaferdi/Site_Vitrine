@@ -1,5 +1,6 @@
 .hero-section {
-  
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(3, 3, 3, 0.4) 100%), 
+              url('c:\Users\hp\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\68E83A34CAE83AA272780F1AFDDA9C75BB76C1AB\transfers\2026-13\WhatsApp Image 2026-03-27 at 19.35.28.jpeg'); 
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -11,7 +12,7 @@
 
 
 .badge-top {
-  background: #da950b;
+  /* background:  ; */
   color: #053F5C;
   padding: 8px 20px;
   border-radius: 50px;
@@ -86,7 +87,6 @@
     transform: translateX(0);
   }
 }
- 
 
 
 @media (max-width: 768px) {
