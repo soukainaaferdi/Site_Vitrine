@@ -1,50 +1,3 @@
-// import React from 'react';
-// import '../Styles/Home.css';
-// import { Link } from 'react-router-dom';
-
-// const Hero = () => {
- 
-//   const sectionStyle = {
-//     backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(3, 3, 3, 0.4) 100%), url('/images/home.jpg')`,
-//     backgroundSize: 'cover',
-//     backgroundPosition: 'center'
-//   };
-
-//   return (
-//     <section style={sectionStyle} className="hero-section">
-//       <div className="container">
-//         <div className="row">
-//           <div className="col-12 col-md-8 animate-fade-in">
-//             <h1 className="display-3 fw-bold mb-4">
-//               Bienvenue à l’ISAG Casablanca <br /> 
-//               <span className="isag-subtext">Institut Spécialisé des Arts Graphiques</span>
-//             </h1>
-//             <p className="lead mb-5 description">
-//               Développez vos compétences en design graphique et en techniques d’impression
-//             </p>
-//             <div className="d-flex gap-3">
-//               <button className="btn-lg rounded-pill hero-btn">
-//                 Contacter
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-
-//   );
-// };
-
-// export default Hero;
-
-
-
-
-
-
-
-
-
 import React from 'react';
 import '../Styles/Home.css';
 import { Link } from 'react-router-dom';
@@ -83,6 +36,9 @@ const Hero = () => {
                   Contactez-nous
                 </a>
               </div>
+                <a href='#Dashboard' className="mt-4 btn btn-lg px-5 rounded-pill hero-btn secondary-btn text-decoration-none d-inline-block text-white">
+                  Dashboard
+                </a>
             </div>
           </div>
         </div>

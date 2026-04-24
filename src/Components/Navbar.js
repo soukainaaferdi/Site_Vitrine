@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -11,69 +10,69 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top" style={{ background: "#053F5C" }}>
-        <div className="container">
-          {/* Logo - I used the Image version as it looks more professional for ISAG */}
-          <Link className="navbar-brand d-flex align-items-center" to="/" onClick={closeMenu}>
-            <img className="logo" src="/images/image.png" alt="ISAG Logo" style={{ height: "40px" }} />
-          </Link>
+      <nav className="navbar navbar-expand-lg fixed-top" style={{ background: "#053F5C", minHeight: "80px" }}>
+        <div className="container d-flex justify-content-between align-items-center">
+          
+         {/* Logo */}
+        <Link className="navbar-brand p-0" hidefocus="true" to="/" onClick={closeMenu}>
+          <div className="d-flex align-items-center gap-2">
+            <img className="logo-img" src="/images/image.png" alt="Logo" />
+            <p className="brand-text">ISAC</p>
+          </div>
+        </Link>
 
-          {/* Hamburger Button for Mobile */}
           <button 
-            className="navbar-toggler text-white border-0 fs-2 d-lg-none" 
+            className="d-lg-none bg-transparent border-0 text-white fs-1" 
+            type="button"
             onClick={openMenu}
+            aria-label="Ouvrir le menu"
           >
             ☰
           </button>
 
-          {/* Desktop Links */}
           <div className="collapse navbar-collapse d-none d-lg-block">
-            <ul className="navbar-nav ms-auto d-flex align-items-center gap-4">
-              <li className="nav-item">
-                <HashLink smooth to="/#home" className="nav-link text-white">Accueil</HashLink>
-              </li>
-              <li className="nav-item">
-                <HashLink smooth to="/#about" className="nav-link text-white">About</HashLink>
-              </li>
-              <li className="nav-item">
-                <HashLink smooth to="/#formations" className="nav-link text-white">Formations</HashLink>
-              </li>
-              <li className="nav-item">
-                <HashLink smooth to="/#contact" className="nav-link text-white">Contact</HashLink>
-              </li>
-              <li className="nav-item">
-                <Link to="/actualites" className="nav-link text-white">Actualités</Link>
-              </li>
+            <ul className="navbar-nav ms-auto gap-4">
+           <li className="nav-item">
+            <Link to="/" className="nav-link text-white">Accueil</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-link text-white">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/formations" className="nav-link text-white">Formations</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact" className="nav-link text-white">Contact</Link>
+          </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      {/* Side Bar (Mobile) */}
+      {/* Side Bar  */}
       <div className={`side-menu ${open ? "active" : ""}`}>
         <div className="text-end p-3">
-          <button className="border-0 bg-transparent text-white fs-2" onClick={closeMenu}>
+          <button className="border-0 bg-transparent text-white fs-1" onClick={closeMenu}>
             ✕
           </button>
         </div>
         <ul className="list-unstyled p-4">
-          <li className="mb-3">
-            <HashLink smooth to="/#home" className="menu-link" onClick={closeMenu}>Accueil</HashLink>
+          <li className="nav-item mb-4 ">
+            <Link to="/" className="menu-link  text-white ">Accueil</Link>
           </li>
-          <li className="mb-3">
-            <HashLink smooth to="/#about" className="menu-link" onClick={closeMenu}>About</HashLink>
+          <li className="nav-item mb-4 ">
+            <Link to="/about" className=" menu-link text-white ">About</Link>
           </li>
-          <li className="mb-3">
-            <HashLink smooth to="/#formations" className="menu-link" onClick={closeMenu}>Formations</HashLink>
+          <li className="nav-item mb-4 ">
+            <Link to="/formations" className=" menu-link text-white ">Formations</Link>
           </li>
-          <li className="mb-3">
-            <HashLink smooth to="/#contact" className="menu-link" onClick={closeMenu}>Contact</HashLink>
-          </li>
-          <li className="mb-3">
-            <Link to="/actualites" className="menu-link" onClick={closeMenu}>Actualités</Link>
+          <li className="nav-item mb-4">
+            <Link to="/contact" className=" menu-link text-white ">Contact</Link>
           </li>
         </ul>
       </div>
+
+      {open && <div className="menu-overlay" onClick={closeMenu}></div>}
     </>
   );
 };
