@@ -13,11 +13,9 @@ const isAdmin = token && localStorage.getItem('is_admin') === '1';
 
 
 const handleLogout = () => {
-    // 1. On vide la mémoire du navigateur
     localStorage.removeItem('token');
     localStorage.removeItem('is_admin');
     
-    // 2. On rafraîchit la page pour cacher le bouton
     window.location.href = "/";
 };
   
@@ -43,7 +41,7 @@ const handleLogout = () => {
             ☰
           </button>
 
-          <div className="collapse navbar-collapse d-none d-lg-block">
+          <div className=" nav-links-container d-none d-lg-flex">
             <ul className="navbar-nav ms-auto gap-4">
            <li className="nav-item">
             <Link to="/" className="nav-link text-white">Accueil</Link>
@@ -60,8 +58,8 @@ const handleLogout = () => {
 
       {isAdmin && (
     <li className="">
-      <Link to="/actualite" className="btn btn-warning  text-dark rounded text-decoration-none">
-        Gestion Actualités
+      <Link to="/actualites" className="btn btn-warning  text-dark rounded text-decoration-none">
+         Actualites
       </Link>
     </li>
   )}
@@ -69,7 +67,7 @@ const handleLogout = () => {
   {token && (
     <li className="">
       <button onClick={handleLogout} className=" btn btn-danger   rounded text-white text-decoration-none">
-        Déconnexion
+        Deconnexion
       </button>
     </li>
   )}
@@ -106,6 +104,22 @@ const handleLogout = () => {
           <li className="nav-item mb-4">
             <Link to="/contact" className=" menu-link text-white ">Contact</Link>
           </li>
+
+           {isAdmin && (
+    <li className="my-3">
+      <Link to="/actualites" className="btn btn-warning  text-dark rounded text-decoration-none">
+         Actualites
+      </Link>
+    </li>
+  )}
+
+  {token && (
+    <li className="">
+      <button onClick={handleLogout} className=" btn btn-danger   rounded text-white text-decoration-none">
+        Deconnexion
+      </button>
+    </li>
+  )}
         </ul>
       </div>
 

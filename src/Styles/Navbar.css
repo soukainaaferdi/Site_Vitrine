@@ -32,6 +32,24 @@
 }
  
 
+.nav-links-container {
+    display: none; 
+}
+
+@media (min-width: 992px) {
+    .nav-links-container {
+        display: flex !important; 
+        align-items: center;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .d-lg-none {
+        display: none !important;
+    }
+}
 
 
 
@@ -48,7 +66,7 @@
   padding: 0 1rem;
   background-color: #053F5C !important;
   z-index: 1000;
-  overflow: hidden;         
+  overflow: visible;         
 }
 
 .logo-img {

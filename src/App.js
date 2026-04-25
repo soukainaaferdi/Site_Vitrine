@@ -8,9 +8,14 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Formations from './pages/formations';
 import FormationDetails from './pages/formationDetails';
-import Actualités from './pages/Actualites';
 import Login from './pages/login';
 import './Styles/App.css';
+
+
+
+import NewsDashboard from "./pages/Dashbord/NewsDashboard";
+ import AddNews from "./pages/Dashbord/AddNews";
+ import EditNews from "./pages/Dashbord/EditNews";
 
 
 const ScrollToSection = () => {
@@ -38,7 +43,7 @@ function App() {
       <section id="home"><Home /></section>
       <section id="about"><About /></section>
       <section id="formations"><Formations /></section>
-      <section id="actualites"><Actualités /></section>
+      <section id="actualites"><NewsDashboard /></section>
       <section id="contact"><Contact /></section>
     </main>
   );
@@ -62,8 +67,10 @@ function App() {
         <Route path="/home" element={MainPage} />
         <Route path="/about" element={MainPage} />
         <Route path="/formations" element={MainPage} />
-        <Route path="/actualites" element={MainPage} />
         <Route path="/contact" element={MainPage} />
+        <Route path="/actualites" element={<NewsDashboard />} />
+      <Route path="/create" element={<AddNews />} />
+      <Route path="/edit/:id" element={<EditNews />} /> 
       <Route path="/admin-access-portal" element={<Login />} />
 
 
@@ -89,9 +96,7 @@ export default App;
 //   return ( 
 //     <div>
 //       <Routes>
-//         <Route path="/" element={<NewsDashboard />} />
-//         <Route path="/create" element={<AddNews />} />
-//         <Route path="/edit/:id" element={<EditNews />} /> 
+//         
 //       </Routes>
 //     </div>
 //   );

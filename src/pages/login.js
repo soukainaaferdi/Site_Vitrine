@@ -12,20 +12,16 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            // Appel à ton API Laravel
             const response = await axios.post('http://127.0.0.1:8000/api/login', {
                 email: email,
                 password: password
             });
 
-            // On stocke les infos reçues de Laravel
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('is_admin', response.data.user.is_admin);
 
-            // Redirection vers la page d'accueil
             navigate('/');
             
-            // On force un petit rafraîchissement pour que la Navbar voie le changement
             window.location.reload(); 
         } catch (error) {
             alert("Erreur : Identifiants incorrects ou problème serveur");

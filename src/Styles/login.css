@@ -1,21 +1,20 @@
-/* login.css */
 
 .login-minimal-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f2f5; /* Gris très léger pour le fond */
+    background-color: #f0f2f5; 
     font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 .login-card {
     background: #ffffff;
-    padding: 3rem; /* Espace interne large */
+    padding: 3rem; 
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     width: 100%;
-    max-width: 500px; /* Formulaire plus large */
+    max-width: 500px; 
     text-align: center;
 }
 
@@ -34,7 +33,6 @@
     letter-spacing: 1px;
 }
 
-/* Structure du formulaire */
 .login-form {
     text-align: left;
 }
@@ -53,12 +51,12 @@
 
 .input-group input {
     width: 100%;
-    padding: 1rem; /* Inputs plus grands */
+    padding: 1rem; 
     border: 2px solid #e1e1e1;
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s;
-    box-sizing: border-box; /* Évite que l'input dépasse */
+    box-sizing: border-box; 
 }
 
 .input-group input:focus {
@@ -67,7 +65,6 @@
     background-color: #f9f9f9;
 }
 
-/* Bouton Large */
 .btn-login-large {
     width: 100%;
     padding: 1.1rem;
@@ -92,7 +89,6 @@
     color: #aaa;
 }
 
-/* Adaptabilité mobile */
 @media (max-width: 550px) {
     .login-card {
         margin: 1rem;
