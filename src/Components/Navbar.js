@@ -8,6 +8,19 @@ const Navbar = () => {
   const openMenu = () => setOpen(true);
   const closeMenu = () => setOpen(false);
 
+  const token = localStorage.getItem('token');
+const isAdmin = token && localStorage.getItem('is_admin') === '1';
+
+
+const handleLogout = () => {
+    // 1. On vide la mémoire du navigateur
+    localStorage.removeItem('token');
+    localStorage.removeItem('is_admin');
+    
+    // 2. On rafraîchit la page pour cacher le bouton
+    window.location.href = "/";
+};
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg fixed-top" style={{ background: "#053F5C", minHeight: "80px" }}>
@@ -17,7 +30,7 @@ const Navbar = () => {
         <Link className="navbar-brand p-0" hidefocus="true" to="/" onClick={closeMenu}>
           <div className="d-flex align-items-center gap-2">
             <img className="logo-img" src="/images/image.png" alt="Logo" />
-            <p className="brand-text">ISAC</p>
+            <p className="brand-text">ISAG</p>
           </div>
         </Link>
 
@@ -44,10 +57,34 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/contact" className="nav-link text-white">Contact</Link>
           </li>
+
+      {isAdmin && (
+    <li className="">
+      <Link to="/actualite" className="btn btn-warning  text-dark rounded text-decoration-none">
+        Gestion Actualités
+      </Link>
+    </li>
+  )}
+
+  {token && (
+    <li className="">
+      <button onClick={handleLogout} className=" btn btn-danger   rounded text-white text-decoration-none">
+        Déconnexion
+      </button>
+    </li>
+  )}
+          
+
+
+
+          
             </ul>
           </div>
         </div>
       </nav>
+    
+
+      
 
       {/* Side Bar  */}
       <div className={`side-menu ${open ? "active" : ""}`}>

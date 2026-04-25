@@ -1,0 +1,101 @@
+/* login.css */
+
+.login-minimal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Gris très léger pour le fond */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 3rem; /* Espace interne large */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px; /* Formulaire plus large */
+    text-align: center;
+}
+
+.login-header h1 {
+    color: #003366;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Structure du formulaire */
+.login-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem; /* Inputs plus grands */
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Évite que l'input dépasse */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #003366;
+    background-color: #f9f9f9;
+}
+
+/* Bouton Large */
+.btn-login-large {
+    width: 100%;
+    padding: 1.1rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-login-large:hover {
+    background-color: #002244;
+    transform: translateY(-1px);
+}
+
+.login-footer {
+    margin-top: 2rem;
+    color: #aaa;
+}
+
+/* Adaptabilité mobile */
+@media (max-width: 550px) {
+    .login-card {
+        margin: 1rem;
+        padding: 2rem;
+    }
+}

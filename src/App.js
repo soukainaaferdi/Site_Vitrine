@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Formations from './pages/formations';
 import FormationDetails from './pages/formationDetails';
 import Actualités from './pages/Actualites';
+import Login from './pages/login';
 import './Styles/App.css';
 
 
@@ -63,6 +64,8 @@ function App() {
         <Route path="/formations" element={MainPage} />
         <Route path="/actualites" element={MainPage} />
         <Route path="/contact" element={MainPage} />
+      <Route path="/admin-access-portal" element={<Login />} />
+
 
         <Route path="/formations/:id" element={<FormationDetails />} />
       </Routes>
