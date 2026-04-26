@@ -50,7 +50,6 @@ const NewsDashboard = () => {
 
   return (
     <div>
-      <Navbar />
     <div className="p-8 bg-gray-50 min-h-screen">
       <div className="flex justify-between items-center mb-6 mt-20">
         <h1 className="text-2xl font-bold text-gray-800">Gestion des Actualités</h1>
@@ -93,7 +92,6 @@ const NewsDashboard = () => {
         </table>
       </div>
     </div>
-    <Footer />
     </div>
   );
 };

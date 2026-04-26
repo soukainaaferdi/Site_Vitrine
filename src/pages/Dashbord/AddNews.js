@@ -67,7 +67,6 @@ const AddNews = () => {
 
   return (
     <div>
-        <Navbar />
     <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center mt-20">
       
       {/* Header section */}
@@ -137,7 +136,6 @@ const AddNews = () => {
         </form>
       </div>
     </div>
-    <Footer />
     </div>
   );
 };
