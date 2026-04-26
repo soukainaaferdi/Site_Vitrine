@@ -42,28 +42,41 @@ const EditNews = () => {
     };
   
 
-    const handleUpdate = async (e) => {
-        e.preventDefault();
-        setErrors({});
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    setErrors({});
 
-        const dataToSend = new FormData();
-        dataToSend.append('_method', 'PUT'); 
-        dataToSend.append("titre", formData.titre);
-        dataToSend.append("description", formData.description);
-        dataToSend.append("date", formData.date);
-        if (formData.image) {
-            dataToSend.append("image", formData.image);
-        }
+    const token = localStorage.getItem('token'); // Récupération du token
 
-        try {
-            await axios.post(`http://127.0.0.1:8000/api/actualites/${id}`, dataToSend, { 
-                headers: { 'Content-Type': 'multipart/form-data' }
-            });
-            navigate('/');
-        } catch (error) {
-            console.error("Full Error Object:", error);
+    const dataToSend = new FormData();
+    dataToSend.append('_method', 'PUT'); // Indispensable pour Laravel avec FormData
+    dataToSend.append("titre", formData.titre);
+    dataToSend.append("description", formData.description);
+    dataToSend.append("date", formData.date);
+    
+    if (formData.image) {
+        dataToSend.append("image", formData.image);
+    }
+
+    try {
+        await axios.post(`http://127.0.0.1:8000/api/actualites/${id}`, dataToSend, { 
+            headers: { 
+                'Content-Type': 'multipart/form-data',
+                'Authorization': `Bearer ${token}` 
+            }
+        });
+        alert("Actualité modifiée avec succès !");
+        navigate('/actualites');
+    } catch (error) {
+        if (error.response && error.response.status === 422) {
+            setErrors(error.response.data.errors); 
+        } else if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+            alert("Accès refusé. Vérifiez que vous êtes bien connecté en tant qu'admin.");
+        } else {
+            console.error("Erreur lors de la mise à jour :", error);
         }
-    };
+    }
+};
 
     return (
         <div>

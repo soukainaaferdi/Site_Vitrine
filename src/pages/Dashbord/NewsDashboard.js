@@ -24,16 +24,28 @@ const NewsDashboard = () => {
     }, []);
 
 
-    const handleDelete = async (id) => {
-      if (window.confirm("Voulez-vous vraiment supprimer cette actualité ?")) {
-          try {
-            await axios.delete(`http://127.0.0.1:8000/api/actualites/${id}`);
-              setNews(news.filter(item => item.id !== id));
-          } catch (error) {
-              console.error("Erreur delete:", error);
-          }
-      }
-  };
+   const handleDelete = async (id) => {
+    if (window.confirm("Voulez-vous vraiment supprimer cette actualité ?")) {
+        const token = localStorage.getItem('token');
+
+        try {
+            await axios.delete(`http://127.0.0.1:8000/api/actualites/${id}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            setNews(news.filter(item => item.id !== id));
+        } catch (error) {
+            if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+                alert("Erreur : Vous n'êtes pas autorisé à supprimer cette donnée.");
+            } else {
+                console.error("Erreur delete:", error);
+                alert("Une erreur est survenue lors de la suppression.");
+            }
+        }
+    }
+};
 
 
   return (

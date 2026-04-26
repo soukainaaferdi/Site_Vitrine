@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Toaster } from 'sonner';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'; 
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './pages/Home';
@@ -11,22 +11,19 @@ import FormationDetails from './pages/formationDetails';
 import Login from './pages/login';
 import './Styles/App.css';
 
-
-
 import NewsDashboard from "./pages/Dashbord/NewsDashboard";
- import AddNews from "./pages/Dashbord/AddNews";
- import EditNews from "./pages/Dashbord/EditNews";
-
+import AddNews from "./pages/Dashbord/AddNews";
+import EditNews from "./pages/Dashbord/EditNews";
 
 const ScrollToSection = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-      const sectionId = pathname.substring(1); 
-  
-      if (sectionId) {
-          const element = document.getElementById(sectionId);
-          if (element) {
+    const sectionId = pathname.substring(1); 
+
+    if (sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
@@ -38,28 +35,23 @@ const ScrollToSection = () => {
 };
 
 function App() {
-    const MainPage = (
+  const token = localStorage.getItem('token');
+  const isAdmin = token && localStorage.getItem('is_admin') === '1';
+
+  const MainPage = (
     <main>
       <section id="home"><Home /></section>
       <section id="about"><About /></section>
       <section id="formations"><Formations /></section>
-      <section id="actualites"><NewsDashboard /></section>
+      <section id="dashboard_view"><NewsDashboard /></section> 
       <section id="contact"><Contact /></section>
     </main>
   );
 
   return (
     <div className="App">
-      {/* Fusion : On garde le style personnalisé du Toaster ET le ScrollToSection */}
-      <Toaster 
-        position="top-right" 
-        richColors 
-        toastOptions={{
-          style: { padding: '20px', borderRadius: '12px' },
-        }}
-      />
+      <Toaster position="top-right" richColors />
       <ScrollToSection /> 
-
       <Navbar /> 
       
       <Routes>
@@ -68,12 +60,22 @@ function App() {
         <Route path="/about" element={MainPage} />
         <Route path="/formations" element={MainPage} />
         <Route path="/contact" element={MainPage} />
-        <Route path="/actualites" element={<NewsDashboard />} />
-      <Route path="/create" element={<AddNews />} />
-      <Route path="/edit/:id" element={<EditNews />} /> 
-      <Route path="/admin-access-portal" element={<Login />} />
 
+        {/* ROUTES D'ADMINISTRATION (Vraies pages protégées) */}
+        <Route 
+          path="/dashboard" 
+          element={isAdmin ? <NewsDashboard /> : <Navigate to="/" />} 
+        />
+        <Route 
+          path="/create" 
+          element={isAdmin ? <AddNews /> : <Navigate to="/" />} 
+        />
+        <Route 
+          path="/edit/:id" 
+          element={isAdmin ? <EditNews /> : <Navigate to="/" />} 
+        /> 
 
+        <Route path="/admin-login" element={<Login />} />
         <Route path="/formations/:id" element={<FormationDetails />} />
       </Routes>
 
@@ -83,23 +85,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-// import { Routes, Route } from "react-router-dom";
-// import NewsDashboard from "./pages/Dashbord/NewsDashboard";
-// import AddNews from "./pages/Dashbord/AddNews";
-// import EditNews from "./pages/Dashbord/EditNews";
-
-// const App = () => {
-//   return ( 
-//     <div>
-//       <Routes>
-//         
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -39,19 +39,30 @@ const AddNews = () => {
         dataToSend.append("image", formData.image);
     }
 
-    try {
-        const response = await axios.post('http://127.0.0.1:8000/api/actualites', dataToSend, {
-            headers: { 'Content-Type': 'multipart/form-data' }
-        });
-        console.log("Success:", response.data);
-        navigate('/');
-    } catch (error) {
-        if (error.response && error.response.status === 422) {
-            setErrors(error.response.data.errors);
-        } else {
-            console.error(error);
+ try {
+    // 1. On récupère le token stocké lors du login
+    const token = localStorage.getItem('token');
+
+    const response = await axios.post('http://127.0.0.1:8000/api/actualites', dataToSend, {
+        headers: { 
+            'Content-Type': 'multipart/form-data',
+            // 2. On l'ajoute ici pour que Laravel te reconnaisse
+            'Authorization': `Bearer ${token}` 
         }
+    });
+
+    console.log("Success:", response.data);
+    alert("Actualité ajoutée avec succès !");
+    navigate('/actualites');
+} catch (error) {
+    if (error.response && error.response.status === 422) {
+        setErrors(error.response.data.errors);
+    } else if (error.response && error.response.status === 401) {
+        alert("Session expirée ou non autorisée. Reconnectez-vous.");
+    } else {
+        console.error(error);
     }
+}
 };
 
   return (

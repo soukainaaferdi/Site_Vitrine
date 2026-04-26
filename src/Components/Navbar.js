@@ -58,7 +58,7 @@ const handleLogout = () => {
 
       {isAdmin && (
     <li className="">
-      <Link to="/actualites" className="btn btn-warning  text-dark rounded text-decoration-none">
+      <Link to="/dashboard" className="btn btn-warning  text-dark rounded text-decoration-none">
          Actualites
       </Link>
     </li>
@@ -107,7 +107,7 @@ const handleLogout = () => {
 
            {isAdmin && (
     <li className="my-3">
-      <Link to="/actualites" className="btn btn-warning  text-dark rounded text-decoration-none">
+      <Link to="/dashboard" className="btn btn-warning  text-dark rounded text-decoration-none">
          Actualites
       </Link>
     </li>
