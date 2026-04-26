@@ -67,7 +67,6 @@ const EditNews = () => {
 
     return (
         <div>
-        <Navbar />
         <div className="p-8 max-w-2xl mx-auto mt-20">
             <h1 className="text-2xl font-bold mb-6 text-gray-800">Modifier l'actualité</h1>
             <form onSubmit={handleUpdate} className="bg-white p-6 rounded-xl shadow-md">
@@ -108,7 +107,6 @@ const EditNews = () => {
                 </div>
                 </form>
             </div>
-            <Footer />
         </div>
     );
 };
