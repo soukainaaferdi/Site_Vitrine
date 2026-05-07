@@ -13,10 +13,11 @@ const isAdmin = token && localStorage.getItem('is_admin') === '1';
 
 
 const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('is_admin');
-    
-    window.location.href = "/";
+    if (window.confirm("Voulez-vous vraiment vous déconnecter ?")) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('is_admin');
+        window.location.href = "/";
+    }
 };
   
   return (

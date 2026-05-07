@@ -15,6 +15,8 @@ import NewsDashboard from "./pages/Dashbord/NewsDashboard";
 import AddNews from "./pages/Dashbord/AddNews";
 import EditNews from "./pages/Dashbord/EditNews";
 
+import NotFound from "./pages/notFound";
+
 const ScrollToSection = () => {
   const { pathname } = useLocation();
 
@@ -77,6 +79,8 @@ function App() {
 
         <Route path="/admin-login" element={<Login />} />
         <Route path="/formations/:id" element={<FormationDetails />} />
+
+         <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
