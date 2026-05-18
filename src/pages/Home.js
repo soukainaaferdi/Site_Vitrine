@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ const Home = () => {
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundColor: '#053F5C',
+
       
       minHeight: isMobile ? '48vh' : '100vh',
       display: 'flex',
@@ -25,7 +27,7 @@ const Home = () => {
       width: '100%',
     },
     contentContainer: {
-      
+
       paddingTop: isMobile ? '80px' : '0', 
     },
     title: {
@@ -68,7 +70,7 @@ const Home = () => {
 
   return (
     <section style={styles.heroSection}>
-      
+
       <div className="container text-center text-white px-4" style={styles.contentContainer}>
         <h1 style={styles.title}>
           Bienvenue à <span style={{ color: '#eea108' }}>l'ISAG</span> Casablanca

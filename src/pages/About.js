@@ -43,17 +43,17 @@ const About = () => {
                 </section>
               <div className="image-gallery ">
                 <div className="feature-item">
-                    <img  src="/images/img1.jpg"  alt="img1" />
-                </div>
-                <div className="feature-item">
-                  <img  src="/images/img2.jpg" alt="img2" />
-                </div>
-                <div className="feature-item">
                   <img src="/images/img3.jpg" alt="img3" />
                 </div>
                 <div className="feature-item">
                   <img  src="/images/img4.jpg"  alt="img4"  />
                 </div>     
+                <div className="feature-item">
+                    <img  src="/images/img1.jpg"  alt="img1" />
+                </div>
+                <div className="feature-item">
+                  <img  src="/images/img2.jpg" alt="img2" />
+                </div>
             </div>
               </div>
     </div>

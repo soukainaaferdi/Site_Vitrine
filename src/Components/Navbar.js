@@ -8,6 +8,18 @@ const Navbar = () => {
   const openMenu = () => setOpen(true);
   const closeMenu = () => setOpen(false);
 
+  const token = localStorage.getItem('token');
+const isAdmin = token && localStorage.getItem('is_admin') === '1';
+
+
+const handleLogout = () => {
+    if (window.confirm("Voulez-vous vraiment vous déconnecter ?")) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('is_admin');
+        window.location.href = "/";
+    }
+};
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg fixed-top" style={{ background: "#053F5C", minHeight: "80px" }}>
@@ -17,7 +29,7 @@ const Navbar = () => {
         <Link className="navbar-brand p-0" hidefocus="true" to="/" onClick={closeMenu}>
           <div className="d-flex align-items-center gap-2">
             <img className="logo-img" src="/images/image.png" alt="Logo" />
-            <p className="brand-text">ISAC</p>
+            <p className="brand-text">ISAG</p>
           </div>
         </Link>
 
@@ -30,7 +42,7 @@ const Navbar = () => {
             ☰
           </button>
 
-          <div className="collapse navbar-collapse d-none d-lg-block">
+          <div className=" nav-links-container d-none d-lg-flex">
             <ul className="navbar-nav ms-auto gap-4">
            <li className="nav-item">
             <Link to="/" className="nav-link text-white">Accueil</Link>
@@ -44,10 +56,34 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/contact" className="nav-link text-white">Contact</Link>
           </li>
+
+      {isAdmin && (
+    <li className="">
+      <Link to="/dashboard" className="btn btn-warning  text-dark rounded text-decoration-none">
+         Actualites
+      </Link>
+    </li>
+  )}
+
+  {token && (
+    <li className="">
+      <button onClick={handleLogout} className=" btn btn-danger   rounded text-white text-decoration-none">
+        Deconnexion
+      </button>
+    </li>
+  )}
+          
+
+
+
+          
             </ul>
           </div>
         </div>
       </nav>
+    
+
+      
 
       {/* Side Bar  */}
       <div className={`side-menu ${open ? "active" : ""}`}>
@@ -69,6 +105,22 @@ const Navbar = () => {
           <li className="nav-item mb-4">
             <Link to="/contact" className=" menu-link text-white ">Contact</Link>
           </li>
+
+           {isAdmin && (
+    <li className="my-3">
+      <Link to="/dashboard" className="btn btn-warning  text-dark rounded text-decoration-none">
+         Actualites
+      </Link>
+    </li>
+  )}
+
+  {token && (
+    <li className="">
+      <button onClick={handleLogout} className=" btn btn-danger   rounded text-white text-decoration-none">
+        Deconnexion
+      </button>
+    </li>
+  )}
         </ul>
       </div>
 

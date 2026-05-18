@@ -8,13 +8,13 @@ function Formations() {
   const [visibleCount, setVisibleCount] = useState(3);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/formations")
-      .then(res => setFormations(res.data))
+    axios.get("/formations.json")
+      .then(res => setFormations(res.data.formations))
       .catch(err => console.log(err));
   }, []);
-
+ 
   const showMore = () => {
-    setVisibleCount(prevCount => prevCount + 3);
+    setVisibleCount(prevCount => prevCount + 4);
   };
 
   return (
