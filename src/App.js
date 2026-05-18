@@ -8,8 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Formations from './pages/formations';
 import FormationDetails from './pages/formationDetails';
-
-import Actualités from './pages/Actualites';
+import Actualites from './pages/Actualites';
 import ActualiteDetails from './pages/ActualiteDetails';
 
 import Login from './pages/login';
@@ -45,12 +44,14 @@ function App() {
   const token = localStorage.getItem('token');
   const isAdmin = token && localStorage.getItem('is_admin') === '1';
 
+  // الصفحة الرئيسية الموحدة للزوار (One Page) بدون لوحة تحكم الأدمن
   const MainPage = (
     <main>
       <section id="home"><Home /></section>
       <section id="about"><About /></section>
       <section id="formations"><Formations /></section>
-      <section id="dashboard_view"><NewsDashboard /></section> 
+      {/* دابا هنا ولاو كيبانو الكروت والمربعات ناضيين للناس في الصفحة الرئيسية */}
+      <section id="actualites"><Actualites /></section> 
       <section id="contact"><Contact /></section>
     </main>
   );
@@ -62,18 +63,19 @@ function App() {
       <Navbar /> 
       
       <Routes>
+        {/* الروابط الأساسية للموقع كتفتح الصفحة الكاملة مع السكرول */}
         <Route path="/" element={MainPage} />
         <Route path="/home" element={MainPage} />
         <Route path="/about" element={MainPage} />
         <Route path="/formations" element={MainPage} />
-
-        <Route path="/actualites" element={MainPage} />
-        <Route path="/actualites/:id" element={<ActualiteDetails />} />
-
-
+        <Route path="/actualites" element={MainPage} /> {/* رجعناها لـ MainPage باش يخدم السكرول للكروت */}
         <Route path="/contact" element={MainPage} />
 
-        {/* ROUTES D'ADMINISTRATION (Vraies pages protégées) */}
+        {/* صفحة تفاصيل خبر معزولة */}
+        <Route path="/actualites/:id" element={<ActualiteDetails />} />
+        <Route path="/formations/:id" element={<FormationDetails />} />
+
+        {/* ROUTES D'ADMINISTRATION (Pages protégées) */}
         <Route 
           path="/dashboard" 
           element={isAdmin ? <NewsDashboard /> : <Navigate to="/" />} 
@@ -88,9 +90,7 @@ function App() {
         /> 
 
         <Route path="/admin-login" element={<Login />} />
-        <Route path="/formations/:id" element={<FormationDetails />} />
-
-         <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
