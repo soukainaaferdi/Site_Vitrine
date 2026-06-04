@@ -61,7 +61,6 @@ const Navbar = () => {
     }
   };
 
-  // Boutons pour le menu desktop (inline)
   const AuthButtons = () => {
     if (loading) return null;
 
@@ -107,7 +106,6 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Bouton menu mobile */}
           <button
             className="d-lg-none bg-transparent border-0 text-white fs-1"
             type="button"
@@ -117,7 +115,7 @@ const Navbar = () => {
             ☰
           </button>
 
-          {/* Menu desktop */}
+          {/* Menu  */}
           <div className="nav-links-container d-none d-lg-flex">
             <ul className="navbar-nav ms-auto gap-4">
               <li className="nav-item">
@@ -138,7 +136,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Side Bar mobile */}
+      {/* Side Bar  */}
       <div className={`side-menu ${open ? "active" : ""}`}>
         <div className="text-end p-3">
           <button

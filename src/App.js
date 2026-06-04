@@ -36,7 +36,6 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Vérification du token au démarrage
   useEffect(() => {
     const checkAuth = async () => {
       const savedToken = localStorage.getItem("token");
@@ -63,7 +62,6 @@ function App() {
     checkAuth();
   }, []);
 
-  // Pendant la vérification, on n'affiche rien
   if (loading) {
     return (
       <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -99,14 +97,12 @@ function App() {
         <Route path="/actualites/:id" element={<ActualiteDetails />} />
         <Route path="/formations/:id" element={<FormationDetails />} />
 
-        {/* Routes admin — NotFound si pas admin */}
         <Route path="/dashboard" element={isAdmin ? <NewsDashboard /> : <NotFound />} />
         <Route path="/create"    element={isAdmin ? <AddNews />       : <NotFound />} />
         <Route path="/edit/:id"  element={isAdmin ? <EditNews />      : <NotFound />} />
 
         <Route path="/admin-login" element={<Login />} />
 
-        {/* URL inexistante */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 
